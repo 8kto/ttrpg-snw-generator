@@ -29,6 +29,7 @@
     "@typescript-eslint/parser": "^7.14.1",
     "babel-jest": "^29.7.0",
     "backstopjs": "^6.3.23",
+    "daisyui": "^4.12.10",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
