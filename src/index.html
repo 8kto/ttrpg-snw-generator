@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" data-theme="emerald">
   <head>
     <meta charset="UTF-8" />
     <title>Swords & Wizardry: Character generator, Equipment & Inventory</title>
@@ -38,7 +38,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gen-50 p-4">
+  <body class="bg-base-100 text-base-content p-4">
     <noscript> Sorry, JS should be enabled </noscript>
 
     <header class="flex items-center justify-center w-full min-w-full overflow-x-auto no-scrollbar flex-col">
@@ -84,7 +84,7 @@
             />
             <button
               id="add-inventory-button"
-              class="btn bg-gen-500 hover:bg-gen-600 text-white py-2 px-4 rounded-b sm:rounded-r sm:rounded-b-none"
+              class="btn btn-primary"
             >
               Add&nbsp;Character
             </button>
@@ -112,7 +112,7 @@
             />
             <button
               id="add-new-item-button"
-              class="btn bg-gen-500 hover:bg-gen-600 text-white py-2 px-4 rounded-b sm:rounded-r sm:rounded-b-none"
+              class="btn btn-secondary"
             >
               Add&nbsp;Item
             </button>
@@ -127,10 +127,10 @@
             </ul>
           </section>
 
-          <section class="inventory-controls mt-0 text-white text-sm">
+          <section class="inventory-controls mt-0 mb-2 text-white text-sm">
             <div class="flex justify-end">
               <button
-                class="minimise-inventories-btn p-1 px-2 mb-2 text-xs bg-gen-300 border border-1 hover:bg-white hover:text-gen-400 rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0"
+                class="minimise-inventories-btn btn btn-xs text-xs"
               >
                 Compact mode
               </button>
@@ -151,13 +151,13 @@
                 <div class="flex items-center my-4 w-full py-2">
                   <select
                     id="equip-set-dropdown"
-                    class="block w-full py-2 px-3 border border-gray-300 bg-white rounded-l-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-base"
+                    class="select select-bordered w-full"
                   >
                     <option value="" class="text-base">Select a set</option>
                   </select>
                   <button
                     id="import-equip-set-button"
-                    class="sm:text-sm bg-gen-500 hover:bg-gen-600 text-white py-2 px-4 rounded-r-md h-full w-32"
+                    class="btn btn-primary w-32 rounded-none"
                     type="button"
                   >
                     Import
@@ -175,21 +175,21 @@
                 <summary class="cursor-pointer px-4 py-2 text-gen-800 bg-gen-50 hover:bg-gen-100">
                   Dump inventory
                 </summary>
-                <div class="text-sm my-2">
+                <div class="my-2">
                   <p>
                     JSON can be used for sharing the inventories and for manual importing (check the
                     <code>localStorage</code>)
                   </p>
                   <button
                     id="dump-json-button"
-                    class="text-xs btn bg-gen-500 hover:bg-gen-600 text-white py-2 px-2 m-2 mr-0 rounded"
+                    class="btn btn-primary"
                     type="button"
                   >
                     Dump JSON
                   </button>
                   <button
                     id="copy-json-button"
-                    class="text-xs btn bg-gen-500 hover:bg-gen-600 text-white py-2 px-2 m-2 ml-0 rounded"
+                    class="btn btn-secondary"
                     type="button"
                   >
                     Copy to clipboard
@@ -208,66 +208,66 @@
                   ℹ️ Base Movement Rate
                 </summary>
                 <div class="my-2">
-                  <table class="table-auto w-full mb-4 bg-white rounded shadow-md text-sm">
-                    <thead class="bg-gen-50">
+                  <table class="mb-4 shadow-md text-sm table table-zebra">
+                    <thead class="bg-base-300">
                       <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Weight Carried</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">
+                        <th class="text-left uppercase">Weight Carried</th>
+                        <th class="text-left uppercase">
                           Base Movement Rate
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="px-6 py-2">Up to 75 pounds</td>
-                        <td class="px-6 py-2">12</td>
-                      </tr>
-                      <tr class="bg-gray-50">
-                        <td class="px-6 py-2">76–100 pounds</td>
-                        <td class="px-6 py-2">9</td>
+                        <td>Up to 75 pounds</td>
+                        <td>12</td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-2">101–150 pounds</td>
-                        <td class="px-6 py-2">6</td>
+                        <td>76–100 pounds</td>
+                        <td>9</td>
                       </tr>
-                      <tr class="bg-gray-50">
-                        <td class="px-6 py-2">151–300 pounds (300-pound maximum)</td>
-                        <td class="px-6 py-2">3</td>
+                      <tr>
+                        <td>101–150 pounds</td>
+                        <td>6</td>
+                      </tr>
+                      <tr>
+                        <td>151–300 pounds (300-pound maximum)</td>
+                        <td>3</td>
                       </tr>
                     </tbody>
                   </table>
-                  <table class="min-w-full table-auto bg-white shadow-md rounded text-sm">
-                    <thead class="bg-gen-50 text-left">
+                  <table class="mb-4 shadow-md text-sm table table-zebra">
+                    <thead class="bg-base-300 ">
                       <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Description</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase w-64">Speed</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Results</th>
+                        <th class="uppercase">Description</th>
+                        <th class="uppercase w-64">Speed</th>
+                        <th class="uppercase">Results</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="bg-gray-50">
-                        <td class="px-4 py-2">Walking</td>
-                        <td class="px-4 py-2">Base movement rate * 20 feet/turn</td>
-                        <td class="px-4 py-2">Mapping and careful observation of the surroundings are possible.</td>
+                    <tr>
+                        <td>Walking</td>
+                        <td>Base movement rate * 20 feet/turn</td>
+                        <td>Mapping and careful observation of the surroundings are possible.</td>
                       </tr>
                       <tr>
-                        <td class="px-4 py-2">Running</td>
-                        <td class="px-4 py-2">Base movement rate * 40 feet/turn</td>
-                        <td class="px-4 py-2">
+                        <td>Running</td>
+                        <td>Base movement rate * 40 feet/turn</td>
+                        <td>
                           No mapping permitted. <br />
                           Characters are automatically surprised and have no chance to surprise others. <br />
                           The sound of running may attract the attention of enemies.
                         </td>
                       </tr>
-                      <tr class="bg-gray-50">
-                        <td class="px-4 py-2">Combat</td>
-                        <td class="px-4 py-2">
+                    <tr>
+                        <td>Combat</td>
+                        <td>
                           (Base movement rate / 3) * 10 feet <br />
                           [6] = 20ft<br />
                           [9] = 30ft<br />
                           [12] = 40ft
                         </td>
-                        <td class="px-4 py-2">
+                        <td>
                           Dashing around, battling your foes. Alternatively, running for your life.
                         </td>
                       </tr>
@@ -276,12 +276,12 @@
                 </div>
               </details>
 
-              <details class="mb-4 border-b border-gray-200">
+              <details class="mb-4">
                 <summary class="cursor-pointer px-4 py-2 text-gen-800 bg-gen-50 hover:bg-gen-100">
                   Add Equipment by Name
                 </summary>
-                <div class="">
-                  <p class="py-2 text-gen-600 text-sm">Items will be added to the selected Inventory.</p>
+                <div class="py-2">
+                  <p>Items will be added to the selected Inventory.</p>
 
                   <div class="mb-2">
                     <input type="checkbox" id="equip-import-allow-only-existing" class="mr-2" checked />
@@ -299,11 +299,11 @@
 
                   <button
                     id="convert-button"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    class="btn btn-primary"
                   >
                     Add items
                   </button>
-                  <div id="error-output" class="mt-4 text-red-500"></div>
+                  <div id="error-output" class="my-4 text-red-500"></div>
                 </div>
               </details>
             </div>
@@ -351,12 +351,12 @@
     <template id="template-new-char-controls">
       <section class="inventory-controls-top-section mt-4 text-gen-800 text-sm flex gap-x-1">
         <button
-          class="add-new-random-char-btn text-xs border rounded bg-white text-black-400 hover:text-white rounded-l hover:bg-gen-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 flex items-center"
+          class="add-new-random-char-btn btn btn-sm btn-primary flex items-center"
         >
           <span class="block px-2 py-1">♻ Generate random character</span>
         </button>
         <button
-          class="save-char-btn text-xs border rounded bg-alt text-white hover:text-alt rounded-l hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 items-center"
+          class="save-char-btn text-xs btn btn-sm btn-accent"
         >
           <span class="block px-2 py-1">Save</span>
         </button>
@@ -435,27 +435,27 @@
           <table class="table-stats table-fixed border border-gray-300 flex-grow shadow-md">
             <tbody>
               <tr class="col-stat-Strength even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">STRENGTH</td>
+                <td>STRENGTH</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-stat-Dexterity even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">DEXTERITY</td>
+                <td>DEXTERITY</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-stat-Constitution even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">CONSTITUTION</td>
+                <td>CONSTITUTION</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-stat-Intelligence even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">INTELLIGENCE</td>
+                <td>INTELLIGENCE</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-stat-Wisdom even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">WISDOM</td>
+                <td>WISDOM</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-stat-Charisma even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">CHARISMA</td>
+                <td>CHARISMA</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
             </tbody>
@@ -465,43 +465,43 @@
           <table class="table-bonuses w-full table-fixed border border-gray-300 flex-grow text-sm shadow-md">
             <tbody>
               <tr class="col-bonus-ToHit even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Bonus to Hit (STR)</td>
+                <td>Bonus to Hit (STR)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-Doors even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Open Doors (STR)</td>
+                <td>Open Doors (STR)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-Damage even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Damage Bonus (STR)</td>
+                <td>Damage Bonus (STR)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-Carry even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Carry Modifier (STR)</td>
+                <td>Carry Modifier (STR)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-MissilesToHit even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Bonus to Missiles (DEX)</td>
+                <td>Bonus to Missiles (DEX)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-ArmorClass even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Armor Bonus (DEX)</td>
+                <td>Armor Bonus (DEX)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-HitPoints even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Hit Point Bonus (CON)</td>
+                <td>Hit Point Bonus (CON)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-RaiseDeadSurvivalChance even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Raise Dead Survival (CON)</td>
+                <td>Raise Dead Survival (CON)</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-MaxAdditionalLanguages even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Additional Languages</td>
+                <td>Additional Languages</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
               <tr class="col-bonus-MaxNumberOfSpecialHirelings even:bg-gray-50 hover:bg-gen-50">
-                <td class="px-4 py-2">Max # of Special Hirelings</td>
+                <td>Max # of Special Hirelings</td>
                 <td class="px-4 py-2 w-1/3"></td>
               </tr>
             </tbody>
